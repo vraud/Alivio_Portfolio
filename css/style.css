@@ -75,8 +75,6 @@ h1, h2, h3, h4, h5 {
 img {
     display: block;
 }
-.header {
-}
 .container {
     max-width: 1920px;
 }
@@ -137,10 +135,12 @@ img {
     max-width: 100%;
     min-height: 895px;
     background-image: url(../img/BG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 }
 .headline {
-    width: 440px;
+    max-width: 440px;
     height: 384px;
     position: absolute;
     top: 19.5%;
@@ -165,8 +165,6 @@ img {
 .main {
     max-width: 1920px;
 }
-.howItwork {
-}
 .howItwork__container {
     max-width: 1413px;
     margin: 0 auto;
@@ -185,8 +183,6 @@ img {
     grid-template-columns: repeat(2, 1fr);
     gap: 70px;
 }
-.text-grid__item {
-}
 .text-h2 {
     font-size: 50px;
     line-height: 157%;
@@ -204,15 +200,15 @@ img {
     padding-left: 28px;
 }
 .step-1 {
-    width: 390px;
+    max-width: 390px;
     padding-top: 12%;
 }
 .step-2 {
-    width: 392px;
+    max-width: 392px;
     padding-top: 85%;
 }
 .step-3 {
-    width: 441px;
+    max-width: 441px;
     padding-top: 23%;
 }
 .step__inner {
@@ -275,8 +271,6 @@ img {
     justify-content: space-between;
     gap: 31px;
 }
-.video__flex-item {
-}
 .video__text {
     max-width: 580px;
     padding-top: 50px;
@@ -322,7 +316,7 @@ video {
 }
 .product__photo {
     border-radius: 18px;
-    width: 638px;
+    max-width: 638px;
     height: 573px;
     background: rgba(1, 153, 109, 0.2);
 }
@@ -398,9 +392,6 @@ video {
     background-color: var(--color_darkgreen);
     padding: 73px 0 144px 235px;
 }
-.text-h3 {
-    
-}
 .footer__nav {
     list-style: none;
     font-size: 25px;
@@ -419,4 +410,153 @@ video {
     font-family: var(--third-family);
     font-weight: 900;
     font-size: 40px;
+}
+@media screen and (max-width: 1400px) {
+    .header__headline {
+        background-size: contain;
+    }
+    .video__flex {
+        flex-direction: column;
+    }
+    .video__player{
+        padding-top: 90px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .header__headline {
+        background-size: 100vw 90vh;
+        min-height: 90vh;
+    }
+    .header__nav {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .nav {
+        padding-right: 50px;
+    }
+    .header__btn{
+        width: 100px;
+        height: 35px;
+        padding: 6px 15px;
+        font-size: 10px;
+    }
+    .text-h2 {
+        font-size: 40px;
+    }
+    .howItwork__text-grid{
+        padding-right: 15px;
+    }
+    .howItwork__steps{
+        grid-template-columns: repeat(1,1fr);
+        gap: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        justify-items: center;
+    }
+    .step-1 {
+        padding-top: 0;
+    }
+    .step-2 {
+        padding-top: 0;
+    }
+    .step-3 {
+        padding-top: 0;
+    }
+    .step__p {
+        font-size: 14px;
+    }
+    .product__inner {
+        padding-right: 10px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .nav {
+        padding-right: 10px;
+    }
+    .header__nav{
+        flex-direction: column;
+    }
+    .text-h1 {
+        font-size: 45px;
+    }
+    .text-p{
+        font-size: 15px;
+    }
+    .text-h2 {
+        font-size: 30px;
+    }
+    .howItwork__p{
+        font-size: 15px;
+    }
+    video {
+        width: 700px;
+        height: 400px;
+    }
+    .product__inner {
+        flex-direction: column;
+    }
+    .product__photo {
+        margin: 0 auto;
+    }
+    .product__card {
+        left: 8%;
+    }
+    .product__text {
+        padding-top: 100px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .nav {
+        padding-right: 0;
+    }
+    .nav li {
+        margin-right: 50px;
+    }
+    .nav li a {
+        font-size: 15px;
+    }
+    .text-h1 {
+        font-size: 20px;
+    }
+    .text-p{
+        font-size: 12px;
+    }
+    .text-h2 {
+        font-size: 20px;
+    }
+    .howItwork__text-grid{
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+    .video__flex-item{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .video-h2 {
+        font-size: 30px;
+    }
+    .video-p {
+        font-size: 12px;
+    }
+    video {
+        width: 350px;
+        height: 200px;
+    }
+    .product__profile {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-right: 0;
+    }
+    .product__img {
+        width: 300px;
+    }
+    .footer__container {
+        padding-left: 15px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .text-p{
+        font-size: 8px;
+    }
 }
